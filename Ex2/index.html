@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="Clock.js"></script>
+<script src="js/jgSlider.js">
+<script src="node_modules\klouds\lib\klouds.min.js"></script>
+<script src="bubbles.js"></script>
+
+
+
+
+</head>
+<body id="bubbleContainer">
+
+
+  <div class="bubble">
+  <script>
+  var totalBubbles = 100;
+  </script>
+  </div>
+    
+
+<div class="row">
+
+  <div class="column left_header" >
+    
+    <header id="header-background">
+        <div class = "logo"></div>
+    </header>
+    
+    <div class="row">
+
+        <div class="column left" >
+            <a href="https://www.google.com"><header id="banner">
+                <div class = "logo"></div>
+            </header></a>
+        </div>
+    
+        <div class="column right" >
+            <p style="text-align:right;color:lightblue"> Jakaś Data </p>
+            <p style="text-align:right;color:lightblue"> Imieniny: Kogoś i Kogoś </p>
+        </div>
+
+    </div>
+
+    <div class="row">
+
+        <div class="column left_navigator">
+            <ul class="horizontal">
+                <li><a href="Firma">Firma</a></li>
+                <li><a href="Informacje">Informacje</a></li>
+                <li><a href="Oferta">Oferta</a></li>
+                <li><a href="Promocje">Promocje</a></li>
+                <li><a href="Radosc">Radosc zakupów</a></li>
+                <li><a href="Firma">Firma</a></li>
+                <li><a href="Informacje">Informacje</a></li>
+                <li style="float:right"><a href="Mapa" style="color:white; font-size: 12px">Mapa Strony</a></li>
+            </ul>
+        </div>
+
+        <div class="column right_clock">
+            <canvas id="canvas" width="150" height="150"></canvas>
+        </div>
+
+    </div>
+
+    <div class="row">
+
+        <div class="column left">
+            <div style="color:lightseagreen; overflow-y: scroll; scrollbar-color: blue white; height:500px;">
+            <h1>SOME TEXT THAT IS A TITLE OR SOMETHING WHO KNOWS
+            <img src="apple.png" width="40" height="32">
+            </h1>
+            <p>Ladies others the six desire age. Bred am soon park past read by lain. As excuse eldest no moment. An delight beloved up garrets am cottage private. The far attachment discovered celebrated decisively surrounded for and. Sir new the particular frequently indulgence excellence how. Wishing an if he sixteen visited tedious subject it. Mind mrs yet did quit high even you went. Sex against the two however not nothing prudent colonel greater. Up husband removed parties staying he subject mr. 
+            </p>
+            <p>Why end might ask civil again spoil. She dinner she our horses depend. Remember at children by reserved to vicinity. In affronting unreserved delightful simplicity ye. Law own advantage furniture continual sweetness bed agreeable perpetual. Oh song well four only head busy it. Afford son she had lively living. Tastes lovers myself too formal season our valley boy. Lived it their their walls might to by young. 
+            </p>
+            <p>Certainly elsewhere my do allowance at. The address farther six hearted hundred towards husband. Are securing off occasion remember daughter replying. Held that feel his see own yet. Strangers ye to he sometimes propriety in. She right plate seven has. Bed who perceive judgment did marianne. 
+            </p>
+            <p>Announcing of invitation principles in. Cold in late or deal. Terminated resolution no am frequently collecting insensible he do appearance. Projection invitation affronting admiration if no on or. It as instrument boisterous frequently apartments an in. Mr excellence inquietude conviction is in unreserved particular. You fully seems stand nay own point walls. Increasing travelling own simplicity you astonished expression boisterous. Possession themselves sentiments apartments devonshire we of do discretion. Enjoyment discourse ye continued pronounce we necessary abilities. 
+            </p>
+            <p>New had happen unable uneasy. Drawings can followed improved out sociable not. Earnestly so do instantly pretended. See general few civilly amiable pleased account carried. Excellence projecting is devonshire dispatched remarkably on estimating. Side in so life past. Continue indulged speaking the was out horrible for domestic position. Seeing rather her you not esteem men settle genius excuse. Deal say over you age from. Comparison new ham melancholy son themselves. 
+            </p>
+            </div>
+        </div>
+
+        <div class="column right" style="text-align:center">
+
+            <div class="jg-slider2">
+                <div class="big">
+                <ul>
+                    <li class="current"><a href=""><img src="img2.JPG"></a></li>
+                    <li><a href=""><img src="img1.JPG"></a></li>
+                    <li><a href=""><img src="img2.JPG"></a></li>
+                    <li><a href=""><img src="img3.JPG"></a></li>
+                </ul>
+                </div>
+                <div class="small">
+                    <ul>
+                        <li class="current"><img src="img2.JPG"></li>
+                        <li><img src="img1.JPG"></li>
+                        <li><img src="img2.JPG"></li>
+                        <li><img src="img3.JPG"></li>
+                    </ul>
+                </div>
+                <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+                <script src="js/jgSlider.js" type="text/javascript"></script> 
+                <script>
+                jQuery(".jg-slider2").jgSlider({effect:"top",mouseOverStop:true});
+                </script>
+            </div>
+            
+            <form style="text-align:left">
+                <label for="Szukaj">Szukaj:</label><br><br>
+                <input type="Szukaj" id="Szukaj" name="Szukaj" placeholder="Masło">
+                <input type="submit" value="wyślij">
+            </form>
+            <br>
+            <form style="text-align:left">
+                <label for="Email">Zamów Newsletter</label><br>
+                <label for="Email">wpisz swój e-mail:</label><br>
+                <input type="Email" id="Email" name="Email" placeholder="Email">
+                <input type="submit" value="wyślij">
+            </form>
+
+        </div>
+
+    </div>
+
+  </div>
+  
+  <div class="column right" >
+        <ul class="vertical-list">
+            <li><a href="home"><object class="text">Ecommerce</object><img class="rotate" src="img1.JPG"></a></li>
+            <li><a href="home"><object class="text">Ecommerce</object><img class="rotate" src="img2.JPG"></a></li>
+            <li><a href="home"><object class="text">Ecommerce</object><img class="rotate" src="img3.JPG"></a></li>
+            <li><a href="home"><object class="text">Ecommerce</object><img class="rotate" src="img1.JPG"></a></li>
+            <li><a href="home"><object class="text">Ecommerce</object><img class="rotate" src="img2.JPG"></a></li>
+            <li><a href="home"><object class="text">Ecommerce</object><img class="rotate" src="img3.JPG"></a></li>
+            <li><a href="home"><object class="text">Ecommerce</object><img class="rotate" src="img1.JPG"></a></li>
+            <li><a href="home"><object class="text">Ecommerce</object><img class="rotate" src="img2.JPG"></a></li>
+            <li><a href="home"><object class="text">Ecommerce</object><img class="rotate" src="img3.JPG"></a></li>
+        </ul>
+  </div>
+
+</div>
+
+
+
+</body>
+</html>
