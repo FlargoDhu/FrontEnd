@@ -1,5 +1,8 @@
 <template name="info">
-  <h2>Learn Meteor!</h2>
+  <h2>Website Ranking!</h2>
+  <form  class="info-reverse">
+        <input type="submit" name="submit" value="REVERSE THE ORDER">
+      </form>
   <ul>
     <li>
       <form class="info-link-add">
@@ -9,7 +12,28 @@
       </form>
     </li>
     {{#each links}}
-      <li><a href="{{url}}" target="_blank">{{title}}</a></li>
+     <br>
+      <li><div style="display: flex; flex-direction:row"><a  href="{{url}}" target="_blank">{{title}} </a> &nbsp; The score for this website is: {{score }}... &nbsp;
+      <form  class="info-link-delete">
+        <input type="hidden" name="title" value={{title}} required>
+        <input type="hidden" name="url" value={{url}} required>
+        <input type="hidden" name="score" value={{score}} required>
+        <input type="submit" name="submit" value="X">
+      </form>
+      &nbsp;
+      <form class="info-link-addpoint">
+        <input type="hidden" name="title" value={{title}} required>
+        <input type="hidden" name="url" value={{url}} required>
+        <input type="hidden" name="score" value={{score}} required>
+        <input type="submit" name="submit" value="+">
+      </form>
+      &nbsp;
+      <form class="info-link-removepoint">
+        <input type="hidden" name="title" value={{title}} required>
+        <input type="hidden" name="url" value={{url}} required>
+        <input type="hidden" name="score" value={{score}} required>
+        <input type="submit" name="submit" value="—">
+      </form></div> </li><hr>
     {{/each}}
   </ul>
 </template>
