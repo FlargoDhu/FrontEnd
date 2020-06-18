@@ -8,7 +8,7 @@ var cors = require("cors");
 var methodOverride = require("method-override");
 var bodyParser = require("body-parser");
 var path = require("path");
-
+var current_bool = null;
 var port = 4000;
 
 // configuration ===============================================================
@@ -37,6 +37,7 @@ app.use(cors());
 // get all todos
 app.get("/api/todos", function(req, res) {
   // use mongoose to get all todos in the database
+  if(current_bool == null){
   Todo.find(
 
     function(err, todos) {
@@ -45,15 +46,33 @@ app.get("/api/todos", function(req, res) {
 
     res.json(todos); // return all todos in JSON format
   });
+  }
+  else{
+    Todo.find(
+      {
+        done: current_bool
+      },
+      
+      function(err, todos) {
+      // if there is an error retrieving, send the error. nothing after res.send(err) will execute
+      if (err) res.send(err);
+  
+      res.json(todos); // return all todos in JSON format
+  });}
+});
+
+app.get("/api/todos/null", function(){
+  current_bool = null;
 });
 
 app.get("/api/todos/true", function(req, res) {
   // use mongoose to get all todos in the database
+  current_bool = true;
   Todo.find(
     {
       done:true
     },
-
+    
     function(err, todos) {
     // if there is an error retrieving, send the error. nothing after res.send(err) will execute
     if (err) res.send(err);
@@ -64,6 +83,7 @@ app.get("/api/todos/true", function(req, res) {
 
 app.get("/api/todos/false", function(req, res) {
   // use mongoose to get all todos in the database
+  current_bool = false;
   Todo.find(
     {
       done:false

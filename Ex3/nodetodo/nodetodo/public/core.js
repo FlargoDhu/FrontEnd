@@ -39,6 +39,8 @@ function mainController($scope, $http) {
 
     $scope.showAll = function() {
       $http
+        .get("/api/todos/null");
+      $http
         .get("/api/todos", $scope.formData)
         .success(function(data) {
           $scope.todos = data;
