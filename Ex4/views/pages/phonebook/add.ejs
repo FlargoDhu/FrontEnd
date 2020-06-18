@@ -1,0 +1,23 @@
+<div id="add" v-cloak>
+
+  <div class="container"></div>
+    <h1 class="text-center">Create an entry</h1>
+    <div class="add-form">
+      <hr/>
+      <form role="form" action ="/phonebook/add" method="POST">
+          <label for="txtAddress">Address</label>
+          <input class="form-control" id="txtAddress" name="Address" type="text" placeholder="Ul. Nie">
+
+
+          <label for="txtPhoneNumber">PhoneNumber</label>
+          <input class="form-control" id="txtPhoneNumber" name="PhoneNumber" type="text"  placeholder="999999999">
+
+
+          <button type="submit" >Add New Entry</button>
+
+      </form>
+    </div>
+  </div>
+
+</div>
+<%- /* Expose server-rendered data as window.SAILS_LOCALS :: */ exposeLocalsToBrowser() %>

@@ -1,0 +1,40 @@
+<div id="list" v-cloak>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Address</th>
+                <th>PhoneNumber</th>
+            </tr>
+        </thead>
+        <tbody>
+            <%
+            for(var _index=0; _index < phonebook.length; _index++) {
+                var _phonebook = phonebook[_index];
+            %>
+            
+                
+            
+            <tr>
+                <td>><%=_phonebook.Address%></td>
+                <td><%=_phonebook.PhoneNumber%></td>
+                <td>
+                    <form action='delete' method='post'>
+                        <input type="hidden" name="state_address" value="<%=_phonebook.Address%>">
+                        
+                        <button type="submit" class="btn btn-danger">X</button>
+                    </form>
+                </td>
+                <td>
+                    <form action='edit' method='post'>
+                        <input type="hidden" name="state_address" value="<%=_phonebook.Address%>">
+                        <input type="text" name="edit_address" placeholder="New Address">
+                        <input type="text" name="edit_number" placeholder="New Number">
+                       <button type="submit" class="btn btn-danger">Edit</button>
+                    </form>
+                </td>
+            </tr>
+            <%}%>
+        </tbody>
+    </table>
+</div>
+<%- /* Expose server-rendered data as window.SAILS_LOCALS :: */ exposeLocalsToBrowser() %>
